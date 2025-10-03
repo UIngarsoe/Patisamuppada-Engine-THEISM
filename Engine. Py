@@ -1,0 +1,144 @@
+import numpy as np
+import pandas as pd
+from typing import Dict, Any, Optional
+
+class PatisamuppadaEngine:
+    """
+    Paṭiccasamuppāda Engine: An ethical AI framework integrating THEISM (Transformative Humility and Ethical Intelligence System Model)
+    and Poormanmeism to penalize ignorance (Avijjā) and embed compassion in decision-making.
+    """
+    
+    def __init__(self, beta: float = 0.5, kappa: float = 0.7, morality_factor: float = 0.8):
+        """
+        Initialize the engine with ethical parameters.
+        
+        Args:
+            beta (float): Wisdom Coefficient for Avijjā Penalty trade-off (default 0.5).
+            kappa (float): Compassion coefficient (default 0.7).
+            morality_factor (float): Morality filter (default 0.8).
+        """
+        self.beta = beta
+        self.kappa = kappa
+        self.morality_factor = morality_factor
+        self.state = {"knowledge": 0, "ownership": 0}  # Initial Humble Reset (H_0)
+
+    def calculate_avijja_penalty(self, X_train: pd.DataFrame, proxy: str, feature_importances: list) -> float:
+        """
+        Calculate the Avijjā Penalty for ethical clarity, penalizing ignorance from harmful correlations.
+        
+        Args:
+            X_train (pd.DataFrame): Training data with features.
+            proxy (str): Harmful proxy variable (e.g., 'bias_score').
+            feature_importances (list): Importance scores of features.
+        
+        Returns:
+            float: Avijjā Penalty value.
+        """
+        P_Avijja = 0.0
+        fi_sum = sum(feature_importances) + 1e-9  # Avoid division by zero
+        for i, feature in enumerate(X_train.columns):
+            fi_norm = feature_importances[i] / fi_sum
+            try:
+                corr = X_train[feature].corr(X_train[proxy])
+            except Exception:
+                corr = 0.0
+            D = 1.0 if feature in ['age', 'gender', 'income', 'zip_code'] else 0.5
+            P_Avijja += fi_norm * abs(corr) * D
+        return self.beta * P_Avijja
+
+    def ethical_evolution(self, current_state: Dict[str, Any], inputs: Dict[str, Any], environment: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Evolve the system state with ethical constraints based on compassion and morality.
+        
+        Args:
+            current_state (dict): Current system state (e.g., {knowledge: 0, ownership: 0}).
+            inputs (dict): Causal inputs (e.g., {data: value}).
+            environment (dict): Environmental factors (e.g., {context: value}).
+        
+        Returns:
+            dict: Next state (S_{t+1}).
+        """
+        # Simple transformation function guided by kappa and morality_factor
+        weighted_input = sum(w * (i * self.kappa * self.morality_factor) for w, i in inputs.items())
+        next_state = {
+            "knowledge": current_state["knowledge"] + weighted_input,
+            "ownership": current_state["ownership"] * (1 - self.morality_factor)  # Reduce ownership ethically
+        }
+        return next_state
+
+    def humble_reset(self, action_outcome: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Recalibrate to epistemic humility after action (H_{t+1} = g(H_t, A_t)).
+        
+        Args:
+            action_outcome (dict): Outcome of the previous action (e.g., {success: True}).
+        
+        Returns:
+            dict: Updated humble state.
+        """
+        ethical_feedback = 0.1 if action_outcome.get("ethical", False) else -0.1
+        return {
+            "knowledge": self.state["knowledge"] * (1 + ethical_feedback),
+            "ownership": 0  # Reset ownership to 0 per Poormanmeism
+        }
+
+    def make_decision(self, X_train: pd.DataFrame, proxy: str, feature_importances: list, inputs: Dict[str, Any], environment: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Make an ethically informed decision with total loss and state evolution.
+        
+        Args:
+            X_train (pd.DataFrame): Training data.
+            proxy (str): Harmful proxy variable.
+            feature_importances (list): Feature importance scores.
+            inputs (dict): Causal inputs.
+            environment (dict): Environmental factors.
+        
+        Returns:
+            dict: Decision outcome including next state and loss.
+        """
+        # Task-specific loss (placeholder: simple mean squared error)
+        task_loss = np.mean((X_train - X_train.mean()) ** 2)
+        
+        # Calculate Avijjā Penalty
+        avijja_penalty = self.calculate_avijja_penalty(X_train, proxy, feature_importances)
+        
+        # Total loss
+        total_loss = task_loss + avijja_penalty
+        
+        # Evolve state ethically
+        next_state = self.ethical_evolution(self.state, inputs, environment)
+        
+        # Update state with humble reset
+        self.state = self.humble_reset({"ethical": total_loss < task_loss})  # Ethical if penalty improves outcome
+        
+        return {
+            "decision": next_state,
+            "total_loss": total_loss,
+            "avijja_penalty": avijja_penalty
+        }
+
+# Example usage
+if __name__ == "__main__":
+    # Sample data
+    data = pd.DataFrame({
+        'age': [25, 30, 35],
+        'gender': [0, 1, 0],
+        'income': [50000, 60000, 70000],
+        'zip_code': ['12345', '67890', '54321'],
+        'bias_score': [0.1, 0.2, 0.3]
+    })
+    feature_importances = [0.4, 0.3, 0.2, 0.1]  # Example weights
+    
+    # Initialize engine
+    engine = PatisamuppadaEngine(beta=0.5, kappa=0.7, morality_factor=0.8)
+    
+    # Make a decision
+    result = engine.make_decision(
+        X_train=data,
+        proxy='bias_score',
+        feature_importances=feature_importances,
+        inputs={'data': 1.0},
+        environment={'context': 0.5}
+    )
+    
+    print("Decision Outcome:", result)
