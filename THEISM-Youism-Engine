@@ -1,0 +1,15 @@
+Title: URGENT: Build Upāya Adapter for Epistemic Layering (Input Data Parser)
+Issue Description (Paste the text below):
+The FSTDPSH V3 (YOUISM Engine) requires a community contribution to build the first functional Upāya Adapter responsible for processing raw user input (text/dialogue) into the engine's core variables.
+Purpose (The Service):
+This component acts as the engine's "eyes and ears," translating complex human suffering into the measurable components required by the \mathcal{F}_{\mathcal{S}} (Suffering Function).
+The Task:
+Develop a simple Python class that inherits from an UpayaInterface (as seen in engine_youism.py).
+Use any free, open-source NLP tool (e.g., a simple scikit-learn or Hugging Face classifier, or even rule-based methods initially) to analyze text.
+Output the three core scores for the Epistemic Layering (each score must be a float between 0.0 and 1.0):
+Cognitive Score (\mathcal{C}): Measures internal distress, beliefs, or attachment.
+Environmental Score (\mathcal{E}): Measures external stressors or physical conditions.
+Discrepancy Score (\mathcal{D}): Measures the gap between expectation and reality.
+The Harmlessness Axiom Constraint (The Most Critical Rule):
+The adapter must be rigorously designed to fail the Harmlessness Check if the data is corrupt (e.g., if the adapter outputs a string or a score outside the [0.0, 1.0] range). This is the first test of the Axiom of Harmlessness and is essential for maintaining the YOUISM integrity of the engine.
+Thank you for your effort and wisdom. Sādhu!
