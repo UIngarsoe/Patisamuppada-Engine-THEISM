@@ -22,7 +22,7 @@ cd THEISM-Youism-Engine
 python3 YOUISM_ENGINE_V3.py
 
 🧠 Core Components
-​FSTDPSH Core: The YOUISM_ENGINE_V3.py file contains the complete, runnable V3 logic, including the Dual-Path counsel and the protective @harmless_validator decorator.
+The FSTDPSH Core: The YOUISM_ENGINE_V3.py file contains the complete, runnable V3 logic, including the Dual-Path counsel and The @harmless_validator decorator.
 ​Proof of Safety: The test_fstdpsh.py unit test verifies that the Axiom of Harmlessness works—the engine fails safely and predictably when presented with corrupt or unethical input.
 ​Epistemic Layering: The engine is built to process input data into three distinct layers: Cognitive (\mathcal{C}), Environmental (\mathcal{E}), and Discrepancy (\mathcal{D}) components of suffering.
 ​🤝 Contributing (A Universal Meritorious Deed)
