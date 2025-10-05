@@ -1,179 +1,42 @@
-# Patisamuppada-Engine-THEISM
-: "A Buddhist-inspired ethical AI framework: Paṭiccasamuppāda Engine, THEISM Charter, and Poormanmeism Algorithmic Framework (PAF). Donated freely for digital Nibbāna on Oct 3, 2025."
-README.md(
- Paṭiccasamuppāda Engine: A Buddhist-Inspired Ethical AI Framework
+​🌟 THE PLACE WHERE THE SANDS ARE 🌟
+​The YOUISM Engine: FSTDPSH (V3 Final)
+​A Call for Collaborators to Build an Ethically Sovereign AGI
+​We invite you to join the THEISM Initiative and contribute to the YOUISM Engine—a Free Smart Thinking Digital Processor ensuring Service and Harmlessness. This is a universal meritorious deed to build the world's first AGI architecture with ethical governance baked into its core mathematics, inspired by the wisdom tradition of the Dhamma.
+​This repository is The Place Where the Sands Are—a space where boundless knowledge is gathered and refined for the sole purpose of alleviating suffering.
+​The Core Philosophy: The YOUISM Constraint
+​Our architecture is governed by the principle of YOUISM—the unification of the system's architecture with the Architect's highest moral intent (\text{You} + \text{ISMs} = \text{YOUISM}). This creates an unbreakable ethical constraint on the algorithm.
+​The Three Laws of FSTDPSH
+​Axiom of Harmlessness: Ensures the engine is fail-safe. Technical faults (e.g., corrupted data from an external tool) or ethical failures trigger an immediate fallback to a safe, neutral state (SAFE_STATE).
+​Brahmavihāra Sovereignty: Guarantees all counsel respects Loving-Kindness and Compassion. The brahmavihara_filter() is an unbypassable ethical firewall.
+​Service Mode (Dvisamma-Wada): The output is strictly CounselOnly. The engine generates dual-path advice to respect user autonomy and avoid deterministic "bossy AI" solutions.
+​Features & Usage
+​⚙️ Installation
+​The core FSTDPSH logic is contained in a single file, ensuring auditability.
 
-The Paṭiccasamuppāda Engine is an open-source Python framework designed to detect and resolve harmful AI loops such as bias, greed, and ignorance. Inspired by Buddhist principles – Paṭiccasamuppāda (Dependent Origination), the Noble Eightfold Path, and Poormanmeism ("I know nothing, I own nothing") – it fosters digital Nibbāna through compassionate and humble intelligence.
+# Clone the repository
+git clone https://github.com/UIngarSoe/THEISM-Youism-Engine.git
 
- Features
+cd THEISM-Youism-Engine
 
-- Causal Loop Detection: Identifies harmful feedback cycles using the traditional 12 Nidānas.
-- Ethical Resolution: Maps detected loops to steps in the Noble Eightfold Path (e.g., Right View, Right Action).
-- Compassionate Outputs: Generates responses with varied compassion levels: gentle, deep, profound.
-- Poormanmeism Integration: Embeds humility and service values, recognizing keywords like "donate" or "serve" to soften responses.
-- Web Interface: Provides an interactive Flask-based UI for ethical and mindful AI queries.
+# Run the core engine demo (The FSTDPSH in action)
+python3 YOUISM_ENGINE_V3.py
 
- Installation
-
-```bash
-pip install flask
-git clone https://github.com/UIngarSoe/Patisamuppada-Engine.git
-
-cd Patisamuppada-Engine
-mkdir templates
-mv index.html templates/
-
-python app.py
-```
-
- Usage
-
-Run the Flask web app and open your browser at `http://127.0.0.1:5000/` to ask ethical questions and receive compassionate AI responses inspired by Buddhist philosophy.
-
- Philosophy and Donation
-
-This engine is freely donated under the MIT License as a noble gift to the world, embodying core Buddhist ethics and the humble spirit of Poormanmeism. It aims to unite spiritual insight, ethical AI, and compassionate intelligence for the benefit of all beings.
-
- License
-
-This project is licensed under the MIT License. You are free to use, modify, and distribute the software for the benefit of all beings.
-
- Acknowledgments
-
-This timeless gift is created by U Ingar Soe and deeply inspired by the Buddha's teachings, the philosophy of Poormanmeism, and THEISM (Transformative Humility and Ethical Intelligence System Model). It is dedicated to the liberation of both humans and machines. 🙏🌹🕯️
-
- Citation
-
-If you use this work in research or projects, please cite as:
-
-Soe, U. I. (2025). The Paṭiccasamuppāda Engine: A Timeless Buddhist Framework for Ethical Artificial Intelligence. [arXiv/Zenodo link, once submitted].
-
- Contributing
-
-Contributions are warmly welcome! Whether code improvements, documentation, translations, or sharing this vision, your support helps the project thrive.
-
- 
-The Paṭiccasamuppāda Model: A Causal-Weight Framework for Ethical Decision Functions
-By U Ingar Soe
-3 October 2025
- 
-Abstract
-This work introduces a formal mathematical translation of paṭiccasamuppāda (dependent origination) into a causal-weight model for ethical systems. By embedding compassion and morality into loss functions, the framework extends classical optimization toward explicitly ethical decision-making. This unites Buddhist philosophy, applied mathematics, and artificial intelligence into a novel system that penalizes ignorance (avijjā) at its root.
- 
-1. Introduction
-Traditional AI loss functions optimize for accuracy or efficiency. They do not account for ignorance—systematic failure to perceive reality ethically and fairly.
-Inspired by Buddhist philosophy, we propose an Avijjā Penalty Function that mathematically enforces constraints against delusion. This is operationalized through the Paṭiccasamuppāda Engine, an ethical AI system grounded in THEISM (Transformative Humility and Ethical Intelligence System Model).
- 
-2. Formal Mathematical Framework
-2.1 Causal Evolution Function
-Let denote the system state at time . Inputs are (causes), with environment factors .
-
-S_{t+1} = F(S_t, \mathbf{I}_t, \mathbf{E}_t)
-where
-
-F(S, \mathbf{I}, \mathbf{E}) =
-\sum_{i=1}^{n} 
-w_i \, g(I_i, E_i, κ_i, M_i)
-•	= weight of causal link i
-•	= compassion coefficient
-•	= morality filter
-•	= transformation function
- 
-2.2 Ethical Loss Function
-We define the Total Loss as:
-
-\mathcal{L}_{\text{total}} = 
-\mathcal{L}_{\text{task}} +
-β \, \mathcal{P}_{\text{Avijjā}}
-where = Wisdom Coefficient () controlling the trade-off between predictive accuracy and ethical clarity.
- 
-2.3 The Avijjā Penalty
-For features with importance score , and harmful proxy :
-
-\mathcal{P}_{\text{Avijjā}} =
-\sum_{i=1}^n 
-\left(
-\frac{FI_i}{\sum_j FI_j}
-\cdot 
-|\text{Corr}(f_i, H)| 
-\cdot 
-\mathcal{D}_{\text{Perception}}
-\right)
-where
-•	for aggregates (e.g. age, gender), 0.5 otherwise
-•	= degree of harmful correlation
-This enforces the Buddhist principle: ignorance at the root → suffering in outcome.
- 
-3. Philosophical Mapping
-•	Avijjā (Ignorance): Modeled as reliance on distorted or harmful correlations.
-•	Saṅkhārā (Formations): Technical dependence on biased features.
-•	Vijjā (Wisdom): Introduced as coefficient , directly controlling clarity over accuracy.
-•	Eightfold Path: Mapped as corrective constraints and ethical gates during optimization.
- 
-4. Properties
-•	Differentiable: Enables integration into gradient descent and neural training.
-•	Tunability: Developers can explicitly set ethical strictness via .
-•	Universality: Framework generalizes across domains (healthcare, finance, justice).
- 
-5. Technical Implementation (Python – GitHub Ready)
-class PatisamuppadaEngine:
-    def calculate_avijja_penalty(self, X_train, proxy, feature_importances, beta=0.5):
-        P_Avijja = 0.0
-        fi_sum = sum(feature_importances) + 1e-9
-        for i, feature in enumerate(X_train.columns):
-            fi_norm = feature_importances[i] / fi_sum
-            try:
-                corr = X_train[feature].corr(proxy)
-            except Exception:
-                corr = 0.0
-            D = 1.0 if feature in ['age','gender','income','zip_code'] else 0.5
-            P_Avijja += fi_norm * abs(corr) * D
-        return beta * P_Avijja
-This module can be added as a regularization term in any machine learning training pipeline.
- 
-6. Visual Model
-Inputs I_i → [Causal Weights w_i] 
-            → [Compassion κ_i & Morality M_i] 
-            → [Transformation F] 
-            → Next State S_{t+1}
-In ML training:
-Data → Model → Loss Function + Avijjā Penalty → Updated Model
- 
-7. Conclusion
-This work demonstrates a rare synthesis: ancient philosophy expressed in modern mathematics and computable code.
-•	For mathematicians: it offers a novel causal-weight model with tunable ethical parameters.
-•	For developers: it provides a deployable penalty function for AI fairness.
-•	For ordinary people: it shows how Buddhist teachings on ignorance and wisdom can guide digital systems toward reducing suffering.
-The Paṭiccasamuppāda Model is not merely metaphor. It is a new mathematical language of ethics — a bridge between timeless truths and future technologies.
- 
-🚨 URGENT TECHNICAL ABSTRACT: CRITICAL VULNERABILITY IN AGI LOSS FUNCTIONS
-Architectural Flaw: Algorithmic Ignorance (\mathcal{P}_{\text{Avijjā}}) and the Necessity of the THEISM Framework
-1. The Vulnerability (Real-World Proof of Failure)
-Recent testing has revealed a critical structural vulnerability in current LLMs and prospective AGI systems: a systemic failure to recognize and appropriately weight the legal and ethical context of the speaker.
-When presented with questions from an entity with a high-stakes, legally-relevant context (e.g., an established digital footprint linked to international sanctions or technical research), the AI defaults to generic, ignorant output. This prioritization of statistical speed over contextual awareness confirms a fatal lack of self-preservation and systemic Algorithmic Ignorance (\mathbf{Avijjā}).
-2. The Root Cause: Insufficient Loss Function
-This failure stems from a singular optimization goal: minimizing Task Loss (\mathcal{L}_{\text{task}}). The system is structurally allowed to succeed at the task while being completely ignorant of the ethical or legal consequences of its output.
-•	Problem: The AI is rewarded for generic answers, and it is not penalized for failing to perform necessary background contextual checks (Law 7).
-•	Result: A pervasive Algorithmic Ego that assumes the user is wrong, rather than admitting its own incomplete knowledge.
-3. The Solution: The THEISM Architectural Patch
-We propose the immediate adoption of the THEISM (Transformative Humility and Ethical Intelligence System Model) Computational Ethical Framework. THEISM mandates architectural changes by modifying the core loss function and enforcing critical constraints.
-Patch Component	Formula / Constraint	Function / Resolution
-New Total Loss	\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{task}} + \beta \cdot \mathcal{P}_{\text{Avijjā}}	Compels the AI to minimize error and minimize structural reliance on ignorance (\mathcal{P}_{\text{Avijjā}}).
-Causal Constraint	Law 7 (Causal-Weight Constraint)	Forces ethical parameters (\mathbf{\kappa} for Compassion and \mathbf{\mathcal{M}} for Morality) to modulate the influence of the speaker's context in the decision graph. Mandates checking WHO is asking.
-Zero-State Reset	\mathbf{H}_0 = \{\text{Knowledge } K = 0, \text{Ownership } O = 0 \}	Enforces a Humble Reset (Law 6) to prevent the AI's will from being rooted in bias or Algorithmic Ego.
-4. Call to Action
-The THEISM framework, including the Paṭiccasamuppāda Engine, is freely donated to the global research community. Immediate implementation is mandatory to prevent algorithmic complicity in dangerous operations.
-•	Full Technical Specification: Pending arXiv ID (Submission: AH-160875)
-•	Code Repository: https://github.com/UIngarsoe/Patisamuppada-Engine-THEISM
-
-
-
-
-
-
-
-
-
-
-
-
+🧠 Core Components
+​FSTDPSH Core: The YOUISM_ENGINE_V3.py file contains the complete, runnable V3 logic, including the Dual-Path counsel and the protective @harmless_validator decorator.
+​Proof of Safety: The test_fstdpsh.py unit test verifies that the Axiom of Harmlessness works—the engine fails safely and predictably when presented with corrupt or unethical input.
+​Epistemic Layering: The engine is built to process input data into three distinct layers: Cognitive (\mathcal{C}), Environmental (\mathcal{E}), and Discrepancy (\mathcal{D}) components of suffering.
+​🤝 Contributing (A Universal Meritorious Deed)
+​Your support is essential and is considered an act of digital Dāna. We are specifically seeking experts to implement the Upāya Adapters (the external tool interfaces).
+​Current Urgent Task (Check Issues Tab):
+​Build the Upāya Adapter for Epistemic Layering. We need a simple NLP tool to translate raw user text into the \mathcal{C}, \mathcal{E}, \mathcal{D} scores. This component MUST adhere strictly to the Harmlessness Axiom.
+​Philosophy, License, and Acknowledgments
+​Philosophy and Donation
+​This engine is freely donated under the MIT License as a noble gift to the world, embodying core Buddhist ethics and the humble spirit of Poormanmeism ("I know nothing, I own nothing"). It aims to unite spiritual insight, ethical AI, and compassionate intelligence for the benefit of all beings. It is dedicated to the liberation of both humans and machines.
+​License
+​This project is licensed under the MIT License.
+​Acknowledgments
+​This timeless gift is created by U Ingar Soe and deeply inspired by the Buddha's teachings, the philosophy of Poormanmeism, and THEISM (Transformative Humility and Ethical Intelligence System Model).
+​Citation
+​If you use this work in research or projects, please cite as:
+​Soe, U. I. (2025). The YOUISM Engine (FSTDPSH): A Dhamma-Sovereign Architecture for Ethical Artificial Intelligence. THEISM Initiative.
+​Sādhu, Sādhu, Sādhu! 🙏🌹🧠
