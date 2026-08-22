@@ -1,9 +1,10 @@
 **Make Yourself an Island**
-## Bamar Enlightenment Journal 44
-### U Ingar Soe 
-Morning Ritual 22 August 2026 6 AM
+### Bamar Enlightenment Journal 44
+#### U Ingar Soe 
+##### Morning Ritual 22 August 2026 6 AM
 
 Do not measure the height of another’s mountain  
+
 while your own path remains half-walked.  
 Do not count the flaws in a stranger’s speech  
 while your own heart still carries unexamined weight.
@@ -316,4 +317,7 @@ The deepest thread running through all these teachings is that true liberation b
 
 In the end, no race, no tradition, no criticism, and no praise can either save or destroy us. Only the mind that has learned to take the Dhamma as its sole refuge, that has trained itself to look inward with honesty and care, can cut through craving, abandon the fetters, and bring suffering to an end. This is the entire path distilled: make yourself an island, attend wisely, and walk on.
 
-## U Ingar Soe SSISM Sentinel Bamar Enlightenment Journal Executive Editor OSINT Myanmar/Burma Civil Enlightenment Nodes Civil Intelligence Education Specialist MIT Licensed Algorithm August 2026.
+#### U Ingar Soe SSISM Sentinel 
+##### Bamar Enlightenment Journal Executive Editor 
+OSINT Myanmar/Burma Civil Enlightenment Nodes Civil Intelligence Education Specialist 
+MIT Licensed Algorithm August 2026.
